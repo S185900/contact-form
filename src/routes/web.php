@@ -6,6 +6,8 @@ use App\Http\Controllers\ContactController;
 
 
 Route::get('/', [ContactController::class, 'index']);
+Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
+Route::post('/contacts', [ContactController::class, 'store']);
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +24,9 @@ Route::get('/', [ContactController::class, 'index']);
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
 
 Route::get('/confirm', function () {
     return view('confirm');
